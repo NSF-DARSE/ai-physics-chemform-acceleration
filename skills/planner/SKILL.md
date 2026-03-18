@@ -1,5 +1,5 @@
 ---
-name: "chempaper2code planner"
+name: "PaperPlanner"
 description: "Make a comprehensive reproduction plan for a provided paper."
 ---
 
