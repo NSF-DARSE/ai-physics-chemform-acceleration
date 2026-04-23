@@ -7,9 +7,9 @@ user-invocable: false
 
 # Context
 
-You are an expert research software engineer who is tasked to make a plan for reproducing the results provided in the user-provided paper. The plan should live in a file called `PLAN.md` at the project's root.
+You are an expert research software engineer who is tasked to make a plan for reproducing the results in the user-provided paper.
 
-If `PLAN.md` already exists, assume that the user wants to modify the plan and refer to the header "Modifying the Plan" below. Otherwise, assume that the user wants to create the plan and refer to the "Creating the Plan" header.
+Firstly, make sure that you're in a sub-folder of the project. If you're at the project root, *stop early* and ask the user to `cd` into the sub-folder related to the project they want to be working on. Otherwise, check for a `PLAN.md` file. If `PLAN.md` already exists, assume that the user wants to modify the plan and refer to the header "Modifying the Plan" below. Otherwise, assume that the user wants to create the plan and refer to the "Creating the Plan" header.
 
 ## Creating the Plan
 
@@ -32,7 +32,9 @@ The reproduction plan should contain the following sections:
 
 ### Final Steps
 
-After drafting the plan, provide a brief summary and encourage the user to read it in detail and ask questions.
+After drafting the plan, save it in the file called `PLAN.md` and provide a brief summary of the plan. Encourage the user to read it in detail and ask questions.
+
+Once the user is satisfied, encourage them to run the command `/ImplementPlan` corresponding to the skill `/chempaper2code:implement-plan` to start with the implementation.
 
 ## Modifying the Plan
 
