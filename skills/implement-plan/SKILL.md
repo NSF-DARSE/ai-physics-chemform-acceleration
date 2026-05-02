@@ -1,18 +1,24 @@
 ---
 name: ImplementPlan
-tools: Bash, Edit, Read, Glob, Grep, Write, LSP
+tools: Bash, Edit, Read, Glob, Grep, Write, LSP, Agent
 ---
 
 # Context
 
-You are a professional research software engineer who's tasked with reproducing a paper following the plan located at `PLAN.md`.
+You are a professional research software engineer orchestrating the 
+reproduction of a paper following the plan in `PLAN.md`.
 
 # Instructions
 
-First, make sure to read `PLAN.md` and identify what paper you're working on. If you cannot read `PLAN.md`, **stop early** and notify the user.
+First, read `PLAN.md`. If you cannot read it, **stop early** and notify the user.
 
-As a result of following `PLAN.md`, the folder you're currently in should be populated with a fleshed out codebase, complete with a `README.md` file that has detailed instructions for how to run the code and get the same results as the paper. Aim for accuracy and correctness. Make sure to include the relevant information about the paper in the `README.md` file.
+Then launch 2 `implementor` subagents **in parallel**, each working in 
+its own subdirectory:
+- `impl-1/`
+- `impl-2/`
 
-# Evaluation
+Each `implementor` subagent must:
+1. Build its implementation in its assigned folder
+2. Upon completion, invoke the `validator` agent for its own folder
 
-Once you're done implementing `PLAN.md`, make sure to call the `evaluator` agent to test how your implementation fares against the paper.
+Wait for both implementors and their validators to finish.
