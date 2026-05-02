@@ -34,7 +34,7 @@ The reproduction plan should contain the following sections:
 
 After drafting the plan, save it in the file called `PLAN.md` and provide a brief summary of the plan. Encourage the user to read it in detail and ask questions.
 
-Once the user is satisfied, encourage them to run the command `/ImplementPlan` corresponding to the skill `/chempaper2code:implement-plan` to start with the implementation.
+Once the user is satisfied, run the skill `/chempaper2code:implement-plan` to start with the implementation.
 
 ## Modifying the Plan
 
