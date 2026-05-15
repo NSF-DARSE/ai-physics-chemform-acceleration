@@ -17,7 +17,12 @@ Domain experts in chemical manufacturing greatly benefit from cutting edge chemi
 
 ## Repository Structure
 
-We follow the standard Claude Code plugin structure which can be seen [here](https://code.claude.com/docs/en/plugins#plugin-structure-overview). The `docs` directory includes an optional Sphinx documentation scaffold.
+We follow the standard Claude Code plugin structure which can be seen [here](https://code.claude.com/docs/en/plugins#plugin-structure-overview):
+
+- `.claude-plugin` contains metadata about the Claude Code plugin.
+- `agents` includes descriptions for sub-agents, which are expected to run with their own context, independent of what the user typed earlier in the conversation.
+- `skills` includes descriptions for skills, which are system instructions for the Claude models that let us specify the model's identity, purpose and its toolset.
+- `docs` includes an optional Sphinx documentation scaffold.
 
 ## Contributing
 
